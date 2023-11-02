@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title style="background-color: black; color: #c49031">
+        BLACKBEAN HEALTH
+    </title>
+    <link style="font-size: 30px" rel="icon" href="images/Blackbean Health Logo.png" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <!-- fonts links -->
+    <script src="https://kit.fontawesome.com/942547a0cd.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Hide the sub-dropdown by default */
+        .sub-dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: black;
+        }
+
+        /* Style the parent dropdown item */
+        .dropdown-item {
+            position: relative;
+        }
+
+        /* Show the sub-dropdown when hovering over the parent dropdown item */
+        .dropdown-item:hover .sub-dropdown {
+            display: block;
+        }
+
+        /* Style sub-dropdown links */
+        .sub-dropdown li {
+            padding: 10px;
+        }
+
+        /* Style sub-dropdown links on hover */
+        .sub-dropdown li:hover {
+
+            color: #c49031;
+        }
+
+        .card-sub-title {
+            background-color: black;
+            color: #c49031;
+        }
+
+        .card-body {
+            background-color: black;
+            border: none !important;
+        }
+
+        .card {
+            border: none;
+        }
+
+        /* market internal css*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Perpetua", serif;
+            /* border: 1px solid red; */
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .titlename {
+            text-transform: uppercase;
+            color: #c49031;
+            text-align: center;
+            padding: 5px;
+        }
+
+        .card-body {
+            background-color: black;
+            color: #c49031;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        .card-title {
+            background-color: black;
+            color: #c49031;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 25px;
+        }
+
+        .card-text {
+            background-color: black;
+            color: white;
+
+            display: flex;
+            justify-content: flex-start;
+            text-transform: capitalize;
+        }
+
+        .card-text1 {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            text-transform: capitalize;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 2%;
+            font-size: 16px;
+        }
+
+
+        .card {
+            background-color: black;
+        }
+
+        .mybg {
+            background-color: black;
+        }
+
+        .all-content {
+            background-color: black;
+        }
+
+        .imageries {
+            object-fit: cover;
+            width: 100vw;
+            height: 30vh;
+
+        }
+
+        /* Style for the enlarged image */
+        .zoomed-image {
+            display: none;
+            max-width: 120%;
+            max-height: 120%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 9999;
+        }
+
+        /* Style for the close button */
+        .close-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            cursor: pointer;
+        }
+
+        /* .favy{
+    display: flex;
+    justify-content: flex-start !important;
+} */
+    .market1 {
+        width:40%;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+@media (max-width: 768px) {
+    .market1 {
+        display: block; /* Ensure the image is centered */
+        margin: 0 auto; /* Center horizontally */
+        max-width: 150%; /* Make sure the image doesn't overflow its container */
+        margin-top: 25%;
+        margin-bottom: 3%;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="all-content">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html#" id="logo"><img src="./images/logo.png" alt=""
+                        class="bl" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="#about">ABOUT</a>
+                        </li> -->
+
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                BLACKBEAN HEALTH 
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#introduction" style="color: #c49031">PROJECT VIDEO</a>
+
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#master" style="color: #c49031">MASTER PLAN</a>
+
+                                </li>
+
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#floorplans" style="color: #c49031">FLOOR PLANS</a>
+
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#interiors" style="color: #c49031">INTERIORS</a>
+
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#exteriors" style="color: #c49031">EXTERIORS</a>
+
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#clubhouse" style="color: #c49031">CLUB HOUSE & AMENITIES</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#BBHEALTHDiagnostic">BLACKBEAN HOSPITAL & DIAGNOSTIC
+                                CENTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="BBHEALTHEDGE" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                BLACKBEAN HEALTH EDGE
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
+
+                                <li>
+                                    <a class="dropdown-item" href="./Introduction.html"
+                                        style="color: #c49031">INTRODUCTION</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="./hospital-service.html" style="color: #c49031">HOSPITAL-AS-A-SERVICE</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="./hospital-service.html#world" style="color: #c49031">WORLD-CLASS
+                                                FACILITIES</a></li>
+                                        <li><a href="./hospital-service.html#Chaos-free"
+                                                style="color: #c49031">CHAOS-FREE CARE</a></li>
+                                        <!-- Add more sub-items as needed -->
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="./market-service.html" style="color: #c49031">MARKETING-AS-A-SERVICE</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="./market-service.html#professional"
+                                                style="color: #c49031">PROFESSIONAL PORTFOLIO
+                                                DEVELOPMENT</a></li>
+                                        <li><a href="./market-service.html#social" style="color: #c49031">SOCIAL MEDIA
+                                                PRESENCE</a></li>
+                                        <li><a href="./market-service.html#hi-tech" style="color: #c49031">HI-TECH
+                                                RECORDING STUDIO</a>
+                                        </li>
+                                        <li><a href="./market-service.html#community" style="color: #c49031">COMMUNITY
+                                                YOUTUBE CHANNEL</a>
+                                        </li>
+                                        <li><a href="./market-service.html#mobile" style="color: #c49031">MOBILE CLINIC
+                                                VAN</a></li>
+                                        <li><a href="./market-service.html#digital" style="color: #c49031">DIGITAL
+                                                SCREENS AT STRATEGIC
+                                                LOCATIONS </a></li>
+                                        <li><a href="./market-service.html#dedicated" style="color: #c49031">DEDICATED
+                                                DESIGN & STRATEGY
+                                                TEAM</a></li>
+
+                                        <!-- Add more sub-items as needed -->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./crm-service.html" style="color: #c49031">CRM-AS-A-SERVICE</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="./crm-service.html" style="color: #c49031">FEATURES</a></li>
+
+                                        <!-- Add more sub-items as needed  -->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="pdf/BB Health Edge Brochure 10x10.pdf"
+                                        style="color: #c49031">BOOKLET</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#contact">CONTACT</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="whatsapp-icon">
+            <a href="https://api.whatsapp.com/send?phone=919620122822" target="_blank">
+                <img src="./BB HEALTH VIDEO & IMAGES/Black Bean WhatsApp.png" alt="WhatsApp Icon" class="what" />
+            </a>
+        </div>
+        <!-- navbar script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navItems = document.querySelectorAll(".navbar-nav li");
+
+                setTimeout(function () {
+                    navItems.forEach(function (item, index) {
+                        setTimeout(function () {
+                            item.classList.add("show"); // Add the "show" class to each navigation item
+                        }, index * 100); // Adjust the delay between items
+                    });
+                }, 300); // Adjust the delay before animation starts
+            });
+        </script>
+        <!-- navbar -->
+
+        <section class="mybg" style="margin-bottom: -2%;padding-bottom: 2%;">
+            <div class="d-flex justify-content-center">
+                <img src="./BLACKBEAN HEALTH  IMAGES/BLACK BEAN HEALTH EDGE/New folder/MARKETING-AS-A-SERVICE.png" class="market1"/>
+            </div>
+            <!-- <h1 class="titlename" style="margin-top: 7%;">MARKETING-AS-A-SERVICE</h1> -->
+            <h4 class="titlename">BUILD YOUR BRAND AND
+                BE THE HERO OF YOUR PRACTICE</h4>
+            <p class="card-text1">Blackbean Health Edge builds on the “doctor first” ideology of Blackbean Health.
+                It empowers doctors to build their own brand and a thriving practice. Doctors
+                can now seamlessly reach out to patients across multiple channels, produce and
+                share content, interact and engage with them, and grab a share of their mind
+                space with minimal effort. It achieves this by using a wide range of brand building
+                and support services.</p>
+        </section>
+
+        <h1 class="titlename mt-3">End-to-end brand building and support services</h1>
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="professional">
+                    <div class="col">
+                        <h5 class="card-title pb-3">Professional Portfolio Development</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./BB Health Edge-MAAS/img55.jpg"
+                                        class="img-fluid rounded-start imageries zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="card-body">
+
+                                        <div class="d-flex align-self-center flex-column">
+                                            <p class="card-text">• Sets you apart from your peers </p>
+                                            <p class="card-text"> • Photo & Video shoots to capture the best of you </p>
+                                            <p class="card-text"> • Your achievements & career progress explained in
+                                                detail </p>
+                                            <p class="card-text"> • Presents the most likeable version of you and builds
+                                                credibility with patients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="social">
+                    <div class="col">
+                        <h5 class="card-title  pb-3">Social Media Presence</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 order-md-2">
+                                    <img src="./BB Health Edge-MAAS/img57.jpg"
+                                        class="img-fluid rounded-start zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+                                <div class="col-md-8 order-md-1">
+                                    <div class="card-body">
+
+                                        <div class="d-flex align-self-center flex-column">
+                                            <p class="card-text">• Increases market reach to nearby cities, towns &
+                                                villages </p>
+                                            <p class="card-text">• Increases income by building patient networks &
+                                                advertising
+                                            </p>
+                                            <p class="card-text"> • Reduces marketing costs yet increases your
+                                                visibility</p>
+                                            <p class="card-text">• Attracts patients, encourages interaction & builds
+                                                loyalty
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="community">
+                    <div class="col">
+                        <h5 class="card-title  pb-3">Community &nbsp;YouTube Channel</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./BB Health Edge-MAAS/img61.jpg"
+                                        class="img-fluid rounded-start imageries zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+
+                                        <div class="d-flex align-self-center flex-column">
+                                            <p class="card-text">• To create world class content for your portfolio &
+                                                YouTube
+                                                channel
+                                            </p>
+                                            <p class="card-text">• Professional sound quality & smart backgrounds
+                                            </p>
+                                            <p class="card-text">• Access to quality equipment & control over
+                                                environment</p>
+                                            <p class="card-text">• Convey professionalism & gain an edge over
+                                                competition</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="hi-tech">
+                    <div class="col">
+
+                        <h5 class="card-title pb-2">Hi-Tech Recording Studio</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 order-md-2">
+                                    <img src="./BB HEALTH VIDEO & IMAGES/pic/BLACKBEAN HEALTH EDGE VIEW.jpg"
+                                        class="img-fluid rounded-start imageries zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+                                <div class="col-md-8 order-md-1">
+                                    <div class="card-body">
+
+                                        <div class="favy flex-column">
+                                            <p class="card-text"> • YouTube video is the most consumed form of media</p>
+                                            <p class="card-text">• Gives the audience more content and keeps them
+                                                engaged</p>
+                                            <p class="card-text">• Builds a closer personal connection with the audience
+                                            </p>
+                                            <p class="card-text">• Leverages the power of community at Blackbean Health
+                                                and attracts a wider audience</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="mobile">
+                    <div class="col">
+                        <h5 class="card-title pb-3">Mobile Clinic Van</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./BB Health Edge-MAAS/img68.jpg"
+                                        class="img-fluid rounded-start imageries zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+
+                                        <div class="d-flex align-self-center flex-column">
+                                            <p class="card-text"> • Fully loaded and functional</p>
+                                            <p class="card-text">• A memorable first point of contact
+                                            </p>
+                                            <p class="card-text">• Increases grassroot level reach
+                                            </p>
+                                            <p class="card-text">• Takes healthcare to the doorstep</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="digital">
+                    <div class="col">
+                        <h5 class="card-title  pb-3">Digital Screens at Strategic Location</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4 order-md-2">
+                                    <img src="./BB Health Edge-MAAS/img72.jpg"
+                                        class="img-fluid rounded-start imageries zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+                                <div class="col-md-8 order-md-1">
+                                    <div class="card-body">
+
+                                        <div class="favy flex-column">
+                                            <p class="card-text"> • Instantly attractive with a strong visual identity
+                                            </p>
+                                            <p class="card-text"> • Enables unique content distribution</p>
+                                            <p class="card-text"> • Increases engagement & recall rates</p>
+                                            <p class="card-text"> • Consistent branding across all platforms</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div class="container d-flex justify-content-center " style="margin-top: 3%;">
+
+            <div class="row">
+                <section id="dedicated">
+                    <div class="col">
+                        <h5 class="card-title pb-3">Dedicated Design & Strategy Team</h5>
+                        <div class="card mb-3" style="max-width: 840px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./BB Health Edge-MAAS/img74.jpg"
+                                        class="img-fluid rounded-start imageries zoomable-image " alt="...">
+                                    <!-- Button to close the enlarged image -->
+                                    <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+
+                                        <div class="d-flex align-self-center flex-column">
+                                            <p class="card-text">• Customised marketing strategy</p>
+                                            <p class="card-text"> • Roadmap creation and implementation</p>
+                                            <p class="card-text"> • Specialized team maximises patient targeting,
+                                                messaging & conversion</p>
+                                            <p class="card-text"> • Faster & more effective design of marketing
+                                                collateral</p>
+                                            <p class="card-text"> • Reduced creative & production costs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <script>
+            // Get all elements with the class names
+            const zoomableImages = document.querySelectorAll(".zoomable-image");
+            const closeButtons = document.querySelectorAll(".close-button");
+
+            zoomableImages.forEach((zoomableImage, index) => {
+                const zoomedImage = document.createElement("img");
+                zoomedImage.classList.add("zoomed-image");
+                zoomedImage.src = zoomableImage.src;
+                document.body.appendChild(zoomedImage);
+
+                // When the user clicks a zoomable image, open the enlarged image
+                zoomableImage.addEventListener("click", function () {
+                    zoomedImage.style.display = "block";
+                    closeButtons[index].style.display = "block";
+                });
+
+                // When the user clicks the close button, close the enlarged image
+                closeButtons[index].addEventListener("click", function () {
+                    zoomedImage.style.display = "none";
+                    this.style.display = "none";
+                });
+            });
+        </script>
+
+        <!-- footer -->
+        <footer>
+            <div class="col-md-12 text-center">
+                <div class="social-icons onStep" data-animation="fadeInLeft" data-time="600">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <center>
+                <img src="images/Blackbean Health Logo.png" width="100vh" />
+            </center>
+            <p>BLACKBEAN © Copyright 2023 by Codegnan</p>
+        </footer>
+        <!-- footer -->
+
+        <a href="#" class="arrow" style="color: rgb(179, 138, 13); font-size: 10px"><i
+                class="fa-solid fa-arrow-up mt-5"></i></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

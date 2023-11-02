@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title style="background-color: black; color: #c49031">
+        BLACKBEAN HEALTH
+    </title>
+    <link style="font-size: 30px" rel="icon" href="images/Blackbean Health Logo.png" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+    <!-- bootstrap links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <!-- bootstrap links -->
+    <!-- fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet" />
+    <!-- fonts links -->
+    <script src="https://kit.fontawesome.com/942547a0cd.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet" />
+
+    <style>
+        /* Hide the sub-dropdown by default */
+        .sub-dropdown {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            background-color: black;
+        }
+
+        /* Style the parent dropdown item */
+        .dropdown-item {
+            position: relative;
+        }
+
+        /* Show the sub-dropdown when hovering over the parent dropdown item */
+        .dropdown-item:hover .sub-dropdown {
+            display: block;
+        }
+
+        /* Style sub-dropdown links */
+        .sub-dropdown li {
+            padding: 10px;
+        }
+
+        /* Style sub-dropdown links on hover */
+        .sub-dropdown li:hover {
+
+            color: #c49031;
+        }
+
+        .card-sub-title {
+            background-color: black;
+            color: #ffffff;
+        }
+
+        .card-body {
+            background-color: black;
+            border: none !important;
+        }
+
+        .card {
+            border: none;
+        }
+
+        /*gallery internal css*/
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Perpetua", serif;
+            /* border: 1px solid red; */
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .inn .card-body {
+            background-color: black;
+            color: #c49031;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        .inn .card-title {
+            background-color: black;
+            color: #c49031;
+            display: flex;
+            justify-content: center;
+            text-transform: uppercase;
+        }
+
+        .inn .card {
+            border: none;
+        }
+
+        .all-content {
+            background-color: black !important;
+        }
+
+        /* Style for the enlarged image */
+        .zoomed-image {
+            display: none;
+            max-width: 100%;
+            max-height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 9999;
+        }
+
+        /* Style for the close button */
+        .close-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 10000;
+            cursor: pointer;
+        }
+
+
+
+        /*  */
+    </style>
+</head>
+
+<body>
+    <div class="all-content">
+        <!-- navbar -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="./index.html#" id="logo"><img src="./images/logo.png" alt=""
+                        class="bl" /></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span><i class="fa-solid fa-bars" style="color: white; font-size: 23px"></i></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <!-- <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./index.html#">HOME</a>
+                        </li> -->
+                        <!-- <li class="nav-item">
+                            <a class="nav-link " aria-current="page" href="./index.html#about">ABOUT</a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                BLACKBEAN HEALTH
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#introduction" style="color: #c49031">PROJECT VIDEO</a>
+
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#master" style="color: #c49031">MASTER PLAN</a>
+
+                                </li>
+
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#floorplans" style="color: #c49031">FLOOR PLANS</a>
+
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#interiors" style="color: #c49031">INTERIORS</a>
+
+                                </li>
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#exteriors" style="color: #c49031">EXTERIORS</a>
+
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./gallery.html#clubhouse" style="color: #c49031">CLUB HOUSE & AMENITIES</a>
+
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#BBHEALTHDiagnostic">BLACKBEAN HOSPITAL & DIAGNOSTIC
+                                CENTER</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link dropdown-toggle" href="BBHEALTHEDGE" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                BLACKBEAN HEALTH EDGE
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: black">
+
+                                <li>
+                                    <a class="dropdown-item" href="./Introduction.html"
+                                        style="color: #c49031">INTRODUCTION</a>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="./hospital-service.html" style="color: #c49031">HOSPITAL-AS-A-SERVICE</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="./hospital-service.html#world" style="color: #c49031">WORLD-CLASS
+                                                FACILITIES</a></li>
+                                        <li><a href="./hospital-service.html#Chaos-free"
+                                                style="color: #c49031">CHAOS-FREE CARE</a></li>
+                                        <!-- Add more sub-items as needed -->
+                                    </ul>
+                                </li>
+
+
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li class="dropdown-item">
+                                    <a href="./market-service.html" style="color: #c49031">MARKETING-AS-A-SERVICE</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="./market-service.html#professional"
+                                                style="color: #c49031">PROFESSIONAL PORTFOLIO
+                                                DEVELOPMENT</a></li>
+                                        <li><a href="./market-service.html#social" style="color: #c49031">SOCIAL MEDIA
+                                                PRESENCE</a></li>
+                                        <li><a href="./market-service.html#hi-tech" style="color: #c49031">HI-TECH
+                                                RECORDING STUDIO</a>
+                                        </li>
+                                        <li><a href="./market-service.html#community" style="color: #c49031">COMMUNITY
+                                                YOUTUBE CHANNEL</a>
+                                        </li>
+                                        <li><a href="./market-service.html#mobile" style="color: #c49031">MOBILE CLINIC
+                                                VAN</a></li>
+                                        <li><a href="./market-service.html#digital" style="color: #c49031">DIGITAL
+                                                SCREENS AT STRATEGIC
+                                                LOCATIONS </a></li>
+                                        <li><a href="./market-service.html#dedicated" style="color: #c49031">DEDICATED
+                                                DESIGN & STRATEGY
+                                                TEAM</a></li>
+
+                                        <!-- Add more sub-items as needed -->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+
+                                <li class="dropdown-item">
+                                    <a href="./crm-service.html" style="color: #c49031">CRM-AS-A-SERVICE</a>
+                                    <ul class="sub-dropdown">
+                                        <li><a href="./crm-service.html" style="color: #c49031">FEATURES</a></li>
+
+                                        <!-- Add more sub-items as needed  -->
+                                    </ul>
+                                </li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" href="pdf/BB Health Edge Brochure 10x10.pdf"
+                                        style="color: #c49031">BOOKLET</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html#contact">CONTACT</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="whatsapp-icon">
+            <a href="https://api.whatsapp.com/send?phone=919620122822" target="_blank">
+                <img src="./BB HEALTH VIDEO & IMAGES/Black Bean WhatsApp.png" alt="WhatsApp Icon" class="what" />
+            </a>
+        </div>
+        <!-- navbar script -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const navItems = document.querySelectorAll(".navbar-nav li");
+
+                setTimeout(function () {
+                    navItems.forEach(function (item, index) {
+                        setTimeout(function () {
+                            item.classList.add("show"); // Add the "show" class to each navigation item
+                        }, index * 100); // Adjust the delay between items
+                    });
+                }, 300); // Adjust the delay before animation starts
+            });
+        </script>
+        <!-- navbar -->
+
+
+        <!-- <section class="HEALTH">
+            <div class="container" id="introduction">
+
+
+                <h2 class="emp pt-3">INTRODUCTION</h2>
+                <h5 class="bbh mb-5 pt-3">BLACKBEAN HEALTH</h5>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/Master Plan/CNE1 Elevation.jpeg" alt=""
+                                    class="card-img" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="card">
+                            <div class="card-body pt-5">
+                                <p class="card-sub-title">
+                                    &#9830;&nbsp;&nbsp;SPREAD ACROSS 7.54 ACRES
+                                </p>
+                                <p class="card-sub-title">
+                                    &#9830;&nbsp;&nbsp; 60+ VILLA CLINICS
+                                </p>
+                                <p class="card-sub-title">
+                                    &#9830;&nbsp;&nbsp; 200 - 409 SQ. YDS. PLOT AREA
+                                </p>
+                                <p class="card-sub-title">
+                                    &#9830;&nbsp;&nbsp; 2751- 4570 SQ. FT. BUILT-UP AREA
+                                </p>
+
+                                <p class="card-sub-title">
+                                    &#9830;&nbsp;&nbsp;3350 SQ. YDS. OPEN SPACES
+                                </p>
+                                <p class="card-sub-title">
+                                    &#9830;&nbsp;&nbsp;10000 SQ. FT. LUXURIOUS CLUB HOUSE
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section> -->
+
+        <!-- new video ariel view  bb health-->
+    <section class="names" id="introduction">
+        <h2 class="emp pt-3">PROJECT VIDEO</h2>
+        <video src="./BB HEALTH VIDEO & IMAGES/PROJECT HIGHLIGHTS.mp4" controls
+          poster="./BB HEALTH VIDEO & IMAGES/pic/Black Bean Video Thumbnail.jpg" class="latest"></video>
+      </section>
+      <style>
+        video {
+          width: 99vw;
+  
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        .video {
+          width: 99vw;
+          border: 2px solid
+        }
+      </style>
+
+        <section id="master" class="inn">
+            <div class="card" style="background-color: black;margin-top: 5%;">
+                <div class="card-body">
+                    <h1 class="card-title" style="color:#c49031;display: flex;justify-content: center;">MASTER PLAN</h1>
+
+                </div>
+                <img src="./BLACKBEAN HEALTH  IMAGES/Master Plan/Master Plan.jpeg" class="card-img-bottom" alt="..." />
+            </div>
+    </div>
+    </section>
+    <section id="floorplans" class="inn">
+        <div class="container mt-2 ">
+
+            <div class="card" style="background-color: black;">
+                <h1 class="card-title" style="color:#c49031;display: flex;justify-content: center;">FLOOR PLANS</h1>
+                <div class="card-body">
+
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                        <div class="col">
+                            <div class="card">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/FLOOR PLANS/Plot 26-33 CE1 East Facing Villa Clinic Image_E-Brochure-min-min.png"
+                                    alt="Image" class="zoomable-image card-img-top" />
+
+                                <!-- Button to close the enlarged image -->
+                                <button class="close-button btn btn-danger" style="display: none;">X</button>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Plot 26-33 CE1 East Facing Villa Clinic</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col">
+                            <div class="card">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/FLOOR PLANS/Plot 34 CNE1 North-East Facing Villa Clinic Image_ Print Brochure-min-min.png"
+                                    class="zoomable-image card-img-top" alt="...">
+                                <button class="close-button btn btn-danger" style="display: none;">X</button>
+                                <div class="card-body">
+                                    <h5 class="card-title">Plot 34 CNE1 North-East Facing Villa Clinic</h5>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/FLOOR PLANS/Plot 35 CSE1 South-East Facing Villa Clinic Image_E-Brochure-min-min.png"
+                                    class="zoomable-image card-img-top" alt="...">
+                                <!-- Button to close the enlarged image -->
+                                <button class="close-button btn btn-danger" style="display: none;">X</button>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Plot 35 CSE1 South-East Facing Villa Clinic
+                                    </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/FLOOR PLANS/Plot 40 CSW1 South-West Facing Villa Cinic Image_E-Brochure-min-min.png"
+                                    class="zoomable-image card-img-top" alt="...">
+                                <!-- Button to close the enlarged image -->
+                                <button class="close-button btn btn-danger" style="display: none;">X</button>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Plot 40 CSW1 South-West Facing Villa Cinic </h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/FLOOR PLANS/Plot 41 CNW1 North-West Facing Villa Clinic Image_ E-Brochure-min-min.png"
+                                    class="zoomable-image card-img-top" alt="...">
+                                <!-- Button to close the enlarged image -->
+                                <button class="close-button btn btn-danger" style="display: none;">X</button>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Plot 41 CNW1 North-West Facing Villa Clinic</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card">
+                                <img src="./BLACKBEAN HEALTH  IMAGES/FLOOR PLANS/Plot 42-49 CW1 West Facing Villa Clinic Image_Print Brochure-min-min.png"
+                                    class="zoomable-image card-img-top" alt="...">
+                                <!-- Button to close the enlarged image -->
+                                <button class="close-button btn btn-danger" style="display: none;">X</button>
+
+                                <div class="card-body">
+                                    <h5 class="card-title">Plot 42-49 CW1 West Facing Villa Clinic</h5>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="interiors" class="inn">
+        <div class="container">
+            <h1 class="card-title p-3" style="color:#c49031;display: flex;justify-content: center;">INTERIORS</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/Interiors/42 kitchen dining.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">kitchen dining - west facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/Interiors/Bedroom Image_Brochure.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">BEDROOM - west facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/Interiors/Drawing Room Image_Brochure.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">DRAWING ROOM - west facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/Interiors/living.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">living ROOM - west facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/Interiors/open_kitchen.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">open kitchen - west facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/Interiors/Pooja Room Image_Brochure.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">pooja ROOM - west facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Bathroom Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Bath ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Bedroom Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">bed ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Clinic Consultation Room_Brochure.png"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Clinic Consultation ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Clinic Waiting Area Image_Brochure.png"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">clinic waiting area ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Drawing Room on a Different Level Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">drawing ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Home Theater Image_Brochure.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">home theater ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Living Room Image_Brochure.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">living ROOM - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Private Balcony Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">private balcony - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Private Entrance for Villa_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">private entrance - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/VCNE Interiors/Terrace Garden Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">terrace garden - North East facing villa clinic</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section id="exteriors" class="inn">
+        <div class="container mt-2">
+            <h1 class="card-title p-3" style="color:#c49031;display: flex;justify-content: center;">EXTERIORS</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/STREET VIEW/42-49 CW1 Street View Image_Brochure-min.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title"> West Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/41 - CNW 1/41.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">North-West Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/40 - CSW 1/40-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">South-West Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/35 - CSE 1/35.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">South-East Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/42-49 - CW 1/CW1 Elevation Image_Brochure-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">West Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/34 - CNE 1/Villa Clinic Elevation Image_Brochure-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">North-East Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="    ./BLACKBEAN HEALTH  IMAGES/VILLA CLINIC WITH ELEVATIONS _ INTERIORS/26-33 - CE1/2_1 - Photo.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">East Facing Villa Clinic Elevation</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="clubhouse" class="inn">
+        <div class="container mt-2 mb-3">
+            <h1 class="card-title p-3" style="color:#c49031;display: flex;justify-content: center;">CLUB HOUSE & AMENITIES
+            </h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/CLUB HOUSE/Club House.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">CLUB HOUSE </h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/OPEN AREAS/Amphitheater Image_Brochure-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Amphitheater</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/OPEN AREAS/Infinity Swimming Pool Image_Brochure-min.jpeg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Infinity Swimming Pool</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/OPEN AREAS/Landscape view-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Landscape view</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/OPEN AREAS/PAN VIEW-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">PAN view</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/OPEN AREAS/PLAY AREA 3 copy-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">PLAY Area</h6>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/OPEN AREAS/Spectacular Entrance Wall Image_Brochure-min.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Spectacular Entrance Wall</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/CLUB HOUSE/Lawn Area with Walking Track Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Lawn Area With Walking Track</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/CLUB HOUSE/Temple & Meditation Centre Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Temple & Meditation Center</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="./BLACKBEAN HEALTH  IMAGES/CLUB HOUSE/Turf Sports with Kids Play Area Image_Brochure.jpg"
+                            class="zoomable-image card-img-top" alt="...">
+                        <!-- Button to close the enlarged image -->
+                        <button class="close-button btn btn-danger" style="display: none;">X</button>
+                        <div class="card-body">
+                            <h6 class="card-title">Turf Sports with Kids Play Area</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <script>
+        // Get all elements with the class names
+        const zoomableImages = document.querySelectorAll(".zoomable-image");
+        const closeButtons = document.querySelectorAll(".close-button");
+
+        zoomableImages.forEach((zoomableImage, index) => {
+            const zoomedImage = document.createElement("img");
+            zoomedImage.classList.add("zoomed-image");
+            zoomedImage.src = zoomableImage.src;
+            document.body.appendChild(zoomedImage);
+
+            // When the user clicks a zoomable image, open the enlarged image
+            zoomableImage.addEventListener("click", function () {
+                zoomedImage.style.display = "block";
+                closeButtons[index].style.display = "block";
+            });
+
+            // When the user clicks the close button, close the enlarged image
+            closeButtons[index].addEventListener("click", function () {
+                zoomedImage.style.display = "none";
+                this.style.display = "none";
+            });
+        });
+    </script>
+    <!-- footer -->
+    <footer>
+        <div class="col-md-12 text-center">
+            <div class="social-icons onStep" data-animation="fadeInLeft" data-time="600">
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+        <center>
+            <img src="images/Blackbean Health Logo.png" width="100vh" />
+        </center>
+        <p>BLACKBEAN © Copyright 2023 by Codegnan</p>
+    </footer>
+    <!-- footer -->
+
+    <a href="#" class="arrow" style="color: rgb(179, 138, 13); font-size: 10px"><i
+            class="fa-solid fa-arrow-up mt-5"></i></a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
